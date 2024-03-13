@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sizzling Hair Salon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add specific styles for the login page */
+       
+        header {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4d4d4d; /* Dark grey color */
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff944d; /* Orange color on hover */
+}
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a{
+            text-decoration: none;
+            color: #4d4d4d; /* Dark grey color */
+            transition: color 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+
+        <a href="index.html" class="logo-container">
+            <div class="logo">Sizzling</div>
+        </a>
+        
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+        <form  action="login.jsp">
+        <h1>Login</h1>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="cta-button">Login</button>
+        </form>
+        <a href="forgot-password.html">Forgot Password?</a>
+    </div>
+</body>
+</html>

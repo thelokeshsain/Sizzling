@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Book Appointment</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo-container">
+      <div class="logo">Sizzling</div>
+    </a>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="logout.jsp">Logout</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="admin-login.html">Admin Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Book Appointment</h1>
+    <form id="appointmentForm" action="booking.jsp" method="post">
+      <div class="service-option">
+        <img src="images/bg.jpg" alt="Haircut Service">
+        <input type="radio" id="service-haircut" name="service" value="haircut" required>
+        <label for="service-haircut">Haircut <br>₹ 150</label>
+      </div>
+      <div class="service-option">
+        <img src="images/haircolor.jpg" alt="Coloring Service">
+        <input type="radio" id="service-coloring" name="service" value="coloring" required>
+        <label for="service-coloring">Coloring <br> ₹ 500</label>
+      </div>
+      <div class="service-option">
+        <img src="images/shaving.jpg" alt="Styling Service">
+        <input type="radio" id="service-shaving" name="service" value="shaving" required>
+        <label for="service-shaving">Shaving <br> ₹80</label>
+      </div>
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" name="time" required pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" min="10:00" max="22:00">
+
+      <button type="button" onclick="generatePDF()">Generate Receipt PDF</button>
+    </form>
+
+    <script>
+      // Set the date range dynamically using JavaScript
+      var today = new Date().toISOString().split('T')[0];
+      var fiveDaysLater = new Date();
+      fiveDaysLater.setDate(fiveDaysLater.getDate() + 5);
+      var maxDate = fiveDaysLater.toISOString().split('T')[0];
+
+      document.getElementById('date').setAttribute('min', today);
+      document.getElementById('date').setAttribute('max', maxDate);
+
+      function generatePDF() {
+        var doc = new jsPDF();
+        doc.text(20, 20, "Sizzling Hair Salon");
+        doc.text(20, 30, "Appointment Receipt");
+        var service = document.querySelector('input[name="service"]:checked').value;
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        doc.text(20, 50, "Service: " + service);
+        doc.text(20, 60, "Date: " + date);
+        doc.text(20, 70, "Time: " + time);
+        doc.save('receipt.pdf');
+      }
+    </script>
+  </main>
+
+  <footer>
+    &copy; 2023 Sizzling Hair Salon. All rights reserved.
+  </footer>
+</body>
+
+</html>
