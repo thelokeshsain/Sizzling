@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+            border-radius: 10px;
+            box-shadow: 10px 20px rgb(177, 171, 171);
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="Canvas" width="500px" height="400px"></canvas>
+
+    <script>
+        var cv = document.getElementById("Canvas");
+        var ctx = cv.getContext("2d");
+        // ctx.lineWidth="20";
+        // ctx.fillStyle="blue";
+        //ctx.strokeRect(150,150,150,150);
+        // ctx.lineCap="round";
+        //ctx.moveTo(150,150)
+        //ctx.lineTo(300,300)
+
+        ctx.beginPath(); //Face
+        ctx.arc(200, 200, 50, 0, 2 * Math.PI)
+        ctx.fillStyle = "yellow";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath(); //Eye
+        ctx.arc(180, 190, 7, 0, 2 * Math.PI)
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath(); //Eye
+        ctx.arc(220, 190, 7, 0, 2 * Math.PI)
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(200, 200) //Nose
+        ctx.lineTo(200, 220)
+        ctx.strokeStyle = "red";
+        ctx.stroke()
+
+        ctx.beginPath(); //Smile
+        ctx.arc(200, 200, 30, 0, 1 * Math.PI)
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        ctx.beginPath(); //Tongue
+        ctx.arc(200, 230, 12, 0, 1 * Math.PI)
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+        // //Doraemon
+        // ctx.beginPath(); //Face
+        // ctx.arc(100,110,50,0,2*Math.PI)
+        // ctx.fillStyle="blue";
+        // ctx.fill();
+        // ctx.stroke();
+
+        // ctx.beginPath(); //Eye
+        // ctx.arc(70,90,8,0,2*Math.PI)
+        // ctx.fillStyle="black";
+        // ctx.fill();
+
+        // ctx.beginPath(); //Eye
+        // ctx.arc(130,90,8,0,2*Math.PI)
+        // ctx.fillStyle="black";
+        // ctx.fill();
+
+        // ctx.beginPath(); //Eye
+        // ctx.arc(70,90,3,0,2*Math.PI)
+        // ctx.fillStyle="white";
+        // ctx.fill();
+
+        // ctx.beginPath(); //Eye
+        // ctx.arc(130,90,3,0,2*Math.PI)
+        // ctx.fillStyle="white";
+        // ctx.fill();
+
+        // ctx.beginPath(); //Nose
+        // ctx.arc(100,100,7,0,2*Math.PI)
+        // ctx.fillStyle="red";
+        // ctx.fill();
+
+        // ctx.beginPath(); //Nose
+        // ctx.arc(100,100,2,0,2*Math.PI)
+        // ctx.fillStyle="white";
+        // ctx.fill();
+
+        // ctx.beginPath();
+        // ctx.moveTo(100,105) //NoseLine
+        // ctx.lineTo(100,130)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath();
+        // ctx.moveTo(110,105) //NoseLine
+        // ctx.lineTo(156,115)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath();
+        // ctx.moveTo(110,110) //NoseLine
+        // ctx.lineTo(155,125)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath();
+        // ctx.moveTo(110,115) //NoseLine
+        // ctx.lineTo(155,135)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+
+        // ctx.beginPath();
+        // ctx.moveTo(45,120) //NoseLine
+        // ctx.lineTo(90,105)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath();
+        // ctx.moveTo(45,127) //NoseLine
+        // ctx.lineTo(95,105)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath();
+        // ctx.moveTo(45,135) //NoseLine
+        // ctx.lineTo(95,105)
+        // ctx.strokeStyle="black";
+        // ctx.stroke()
+
+        // ctx.beginPath(); //Smile
+        // ctx.arc(100,120,30,0,1*Math.PI)
+        // ctx.strokeStyle="black";
+        // ctx.stroke();
+
+        // ctx.beginPath(); //Body
+        // ctx.arc(100,210,50,0,2*Math.PI)
+        // ctx.fillStyle="blue";
+        // ctx.fill();
+        // ctx.stroke();
+
+        // ctx.beginPath(); //Body
+        // ctx.arc(100,210,40,0,2*Math.PI)
+        // ctx.fillStyle="white";
+        // ctx.fill();
+        // ctx.stroke();
+
+        // ctx.beginPath(); //Body
+        // ctx.arc(100,210,20,0,1*Math.PI)
+        // ctx.fillStyle="black";
+        // ctx.fill();
+        // ctx.stroke();
+
+
+
+    </script>
+</body>
+
+</html>
