@@ -1,22 +1,21 @@
-# 💇 Sizzling — Salon & Spa Booking Management System
+# Sizzling — Salon & Spa Booking System
 
-A web-based appointment booking and salon administration portal developed in PHP and MySQL for managing customer reservations, treatment offerings, and staff schedules.
-
----
-
-## ✨ Features
-
-* **Customer Online Booking:** Interactive reservation interface (`booking.html` & `book.php`) for scheduling beauty and spa treatments.
-* **Service Directory:** Dynamic catalog of grooming, hair, and spa packages with details and pricing.
-* **User Authentication:** Customer registration and login sessions.
-* **Admin Dashboard:** Central control panel for salon managers:
-  * Add, update, and remove salon services (`admin_services.php`, `add_service.php`, `delete_service.php`).
-  * Add and remove staff members (`admin_staff.php`, `add_staff.php`, `remove_staff.php`).
-  * Review customer appointment bookings and contact inquiries.
+A PHP and MySQL web application for customer salon service booking and administrative management of services and staff.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
+
+* **Online Booking:** Appointment reservation interface (`booking.html`, `book.php`).
+* **Service Listings:** Public catalog of available treatments and services (`services.html`, `services.php`).
+* **User Accounts:** User registration and login functionality.
+* **Admin Dashboard:**
+  * Add, edit, and delete salon services (`admin_services.php`, `add_service.php`, `delete_service.php`).
+  * Add and remove salon staff members (`admin_staff.php`, `add_staff.php`, `remove_staff.php`).
+
+---
+
+## Tech Stack
 
 * **Backend:** PHP
 * **Database:** MySQL / MariaDB (`db_config.php`)
@@ -24,55 +23,47 @@ A web-based appointment booking and salon administration portal developed in PHP
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Sizzling/
 └── Sizzling-main/
-    ├── Pages/
-    │   ├── index.html            # Landing page
-    │   ├── about.html            # Salon background & info
-    │   ├── services.html         # Public treatment catalog
-    │   ├── booking.html          # Appointment booking form
-    │   ├── book.php              # Booking handler
-    │   ├── login.html / php      # Customer login handlers
-    │   ├── registration.html     # Customer registration form
-    │   ├── admin_login.php       # Admin authentication
-    │   ├── admin_dashboard.php   # Administrative overview
-    │   ├── admin_services.php    # Service catalogue management
-    │   ├── admin_staff.php       # Staff allocation & directory
-    │   └── db_config.php         # MySQL database connection
-    └── Assets / Styles           # CSS stylesheets and graphic assets
+    └── Pages/
+        ├── index.html            # Landing page
+        ├── about.html            # About page
+        ├── services.html / php   # Services catalog
+        ├── booking.html          # Appointment booking
+        ├── book.php              # Booking handler
+        ├── login.html / php      # User authentication
+        ├── registration.html     # Account creation
+        ├── admin_login.php       # Admin authentication
+        ├── admin_dashboard.php   # Admin control panel
+        ├── admin_services.php    # Service management
+        ├── admin_staff.php       # Staff management
+        └── db_config.php         # Database configuration
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-* **Local Web Server:** XAMPP, WampServer, LAMP, or PHP CLI (>= 7.4 / 8.x)
-* **Database Server:** MySQL / MariaDB
+* PHP (>= 7.4 or 8.x)
+* MySQL / MariaDB (e.g., via XAMPP, WampServer, or LAMP)
 
-### Installation
+### Setup
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/thelokeshsain/Sizzling.git
    ```
 
-2. **Deploy to Web Server:**
-   * Move the project files to your server root (e.g., `htdocs/Sizzling` in XAMPP).
+2. **Copy to Web Root:**
+   Move the folder to your web server document root (such as `htdocs` in XAMPP).
 
-3. **Configure Database Connection:**
-   * Open `Sizzling-main/Pages/db_config.php`.
-   * Update the MySQL host, username, password, and database name to match your local setup.
+3. **Database Configuration:**
+   Open `Sizzling-main/Pages/db_config.php` and configure database credentials (default database name is `sizzling`).
 
-4. **Access the application:**
-   * Open `http://localhost/Sizzling/Sizzling-main/Pages/index.html` in your browser.
-
----
-
-## 📄 License
-
-Open for learning, portfolio demonstration, and academic web development purposes.
+4. **Open in Browser:**
+   Visit `http://localhost/Sizzling/Sizzling-main/Pages/index.html`.
